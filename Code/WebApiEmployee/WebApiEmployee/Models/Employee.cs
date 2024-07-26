@@ -6,20 +6,17 @@ namespace WebApiEmployee.Models
 {
     public class Employee
     {
-        public int EmployeeID { get; set; }
-        public int FirstName { get; set; }   
-        public int LastName { get; set; }
-        public int DateOfBirth { get; set; }
-        public int Gender { get; set; }
-        public int MaritalStatus { get; set; }
-        public int Address { get; set; }
-        public int PhoneNumber { get; set; }
-        public int Email { get; set; }
-        public int HireDate { get; set; }
-        public int Salary { get; set; }
+        public required string FirstName { get; set; }   
+        public required string LastName { get; set; }
+        public required DateTime DateOfBirth { get; set; }
+        public required char Gender { get; set; }
+        public string? MaritalStatus { get; set; }
+        public string? Address { get; set; }
+        public string? PhoneNumber { get; set; }
+        public required string Email { get; set; }
+        public required DateTime HireDate { get; set; }
+        public required decimal Salary { get; set; }
         public int SupervisorID { get; set; }
-        public int EmploymentStatus { get; set; }
-        public int CreatedAt { get; set; }
-        public int UpdatedAt { get; set; }
+        public required string EmploymentStatus { get; set; }
     }
 }
