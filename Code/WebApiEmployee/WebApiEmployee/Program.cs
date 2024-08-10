@@ -5,7 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 //Crea la variable par la cadena de conexión
-var connectionString = builder.Configuration.GetConnectionString("Connection");
+var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") ?? builder.Configuration.GetConnectionString("Connection");
+
 //registrar servicios para la conexión
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseSqlServer(connectionString)
